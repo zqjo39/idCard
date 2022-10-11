@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  h1 Create Your Card Here
+  form(method = "POST" action = "/card")
+    label(for = "firstName") First:
+    input(type = "text" name = "firstName" id = "firstName")
+
+    label(for = "lastName") Last:
+    input(type = "text" name = "lastName" id = "lastName")
+
+    label(for = "type") Type
+    select(name = "type" id = "type")
+      option(value = "Bronze") Bronze
+      option(value = "Standard") Standard
+      option(value = "Premium") Premium
+
+    label(for = "dateOfBirth") DOB
+    input(type = "date" name = "dateOfBirth" id = "dateOfBirth")
+
+    label(for = "addressLineOne") Address Line One:
+    input(type = "text" name = "addressLineOne" id = "addressLineOne")
+
+    label(for = "addressLineTwo") Address Line Two:
+    input(type = "text" name = "addressLineTwo" id = "addressLineTwo")
+
+    label(for = "city") City:
+    input(type = "text" name = "city" id = "city")
+
+    label(for = "state") State:
+    select(name = "type" id = "state")
+      option(value = "CA") CA
+      option(value = "NV") NV
+      option(value = "WA") WA
+
+    label(for = "zip") Zip Code:
+    input(type = "text" name = "zip" id = "zip")
+
+    button(type = "submit" action = "post") Create My Card
+
