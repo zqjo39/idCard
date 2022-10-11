@@ -19,7 +19,8 @@ router.post('/card', function(req, res) {
     state: req.body.state,
     zip: req.body.zip,
     accountNumber: createAccountNumber(),
-    currentDate: new Date()
+    currentDate: new Date(),
+    cardClass: getCardClass(req.body.type)
   })
 });
 
@@ -32,4 +33,16 @@ function createAccountNumber() {
     accNum += temp;
   }
   return accNum;
+}
+
+function getCardClass(type) {
+  if (type === "Premium") {
+    return "premium"
+  } else if (type === "Standard") {
+    return "standard"
+  } else if (type === "Bronze") {
+    return "bronze"
+  } else {
+    return ""
+  }
 }
