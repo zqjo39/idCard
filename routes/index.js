@@ -3,7 +3,16 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index');
+  res.render('index', {
+    firstName: "John",
+    lastName: "Doe",
+    type: "Standard",
+    addressLineOne: req.body.addressLineOne,
+    addressLineTwo: req.body.addressLineTwo,
+    city: req.body.city,
+    state: req.body.state,
+    zip: req.body.zip,
+  });
 });
 
 router.post('/card', function(req, res) {
