@@ -36,6 +36,10 @@ input, select {
 .title {
   display: flex;
   justify-content: center;
+  font: 30px "Microsoft Yi Baiti", Helvetica, Arial, sans-serif;
+  color: black;
+  padding: 5px;
+  margin: 7px;
 }
 .address-text p{
   padding: 0;
@@ -61,4 +65,7 @@ input, select {
   border: 2px solid #714740;
   background-color: #fff3de;
   color: #52312b;
+}
+.label {
+  color: black;
 }

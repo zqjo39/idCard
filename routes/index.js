@@ -7,16 +7,16 @@ router.get('/', function(req, res) {
     firstName: "John",
     lastName: "Doe",
     type: "Standard",
-    addressLineOne: req.body.addressLineOne,
-    addressLineTwo: req.body.addressLineTwo,
-    city: req.body.city,
-    state: req.body.state,
-    zip: req.body.zip,
+    addressLineOne: "3251 N. Liberty Ave.",
+    addressLineTwo: "Suite 900",
+    city: "Seattle",
+    state: "CA",
+    zip: "00000"
   });
 });
 
 router.post('/card', function(req, res) {
-  console.log(req.body.dateOfBirth)
+  console.log(req.body.dateOfBirth);
   res.render('card', {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
