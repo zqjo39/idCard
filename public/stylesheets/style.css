@@ -17,6 +17,7 @@ input, select {
 .label {
   font-weight: bold;
   margin-right: 8px;
+  color: black;
 }
 .info-container {
   gap: 16px;
@@ -65,7 +66,4 @@ input, select {
   border: 2px solid #714740;
   background-color: #fff3de;
   color: #52312b;
-}
-.label {
-  color: black;
 }
